@@ -1,3 +1,10 @@
+--Schema for F1 2025 Abu Dhabi SQL analysis project
+--Contains tables for:
+-- -lap times
+-- -qualifying results
+-- -race results
+
+
 -- LAP TIMES
 CREATE TABLE f1_lap_times (
 	id SERIAL PRIMARY KEY,
