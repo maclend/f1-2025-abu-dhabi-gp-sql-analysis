@@ -2,4 +2,4 @@
 
 ## Data Description
 The dataset consists of three CSV files from Kaggle:
-**lap_times.csv** - lap-by-lap performance data
+-**lap_times.csv** - lap-by-lap performance data
