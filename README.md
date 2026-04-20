@@ -5,3 +5,5 @@ The dataset consists of three CSV files from Kaggle, slightly modified in Excel 
 1) **lap_times.csv** - lap-by-lap performance data  
 2) **qualifying_results.csv** - qualifying session results (Q1, Q2, Q3)  
 3) **race_results.csv** - final race standings with detailed race information 
+
+Dataset source: [link] (https://www.kaggle.com/datasets/umerhaddii/formula-1-24-rounds-complete-data-all-gps-2025)
