@@ -14,9 +14,9 @@ Dataset source:  [F1 2025 Abu Dhabi GP Dataset](https://www.kaggle.com/datasets/
 Raw CSV files were loaded into staging tables and transformed into analytical tables using SQL.    
 
 Transformations included:   
--Converting time formats into INTERVAL type  
--Handling missing values with NULLIF  
--Cleaning inconsistent data formats  
--Casting numeric values to correct data types  
+- Converting time formats into INTERVAL type  
+- Handling missing values with NULLIF  
+- Cleaning inconsistent data formats  
+- Casting numeric values to correct data types  
 
 
