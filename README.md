@@ -8,8 +8,11 @@ The dataset consists of three CSV files from Kaggle, slightly modified in Excel 
 
 Dataset source:  [F1 2025 Abu Dhabi GP Dataset](https://www.kaggle.com/datasets/umerhaddii/formula-1-24-rounds-complete-data-all-gps-2025)
 
+
+
 ## Data Processing
 Raw CSV files were loaded into staging tables and transformed into analytical tables using SQL.    
+
 Transformations included:   
 -Converting time formats into INTERVAL type  
 -Handling missing values with NULLIF  
