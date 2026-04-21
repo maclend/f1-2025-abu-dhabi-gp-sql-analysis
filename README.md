@@ -1,7 +1,7 @@
 # Formula 1 2025 Abu Dhabi Grand Prix analysis using SQL
 
 ## Data Description
-The dataset consists of three CSV files from Kaggle, with minor changes (column removal or renaming):  
+The dataset consists of three CSV files from Kaggle, with minor changes made in Excel (column removal or renaming):  
 - **lap_times.csv** - lap-by-lap performance data  
 - **qualifying_results.csv** - qualifying session results (Q1, Q2, Q3)  
 - **race_results.csv** - final race standings with detailed race information 
