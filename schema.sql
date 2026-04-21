@@ -5,7 +5,7 @@
 -- -race results
 
 
--- LAP TIMES
+-- Lap times
 CREATE TABLE f1_lap_times (
 	id SERIAL PRIMARY KEY,
     driver TEXT,
@@ -54,7 +54,7 @@ CREATE TABLE f1_q_results (
 
 
 
--- QUALIFYING RESULTS
+-- Qualifying results
 INSERT INTO f1_q_results(
     abbreviation,
     driver_id,
@@ -78,7 +78,7 @@ FROM qualifying_results;
 
 
 
--- RACE RESULTS
+-- Race results
 CREATE TABLE f1_race_results(
 id SERIAL PRIMARY KEY,
 driver INT,
