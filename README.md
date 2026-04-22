@@ -27,8 +27,8 @@ Transformations included:
 
 
 ## Tech Stack
-- SQL( PostgreSQL)
-- Window Functions (ROW_NUMBER,LAG)
+- SQL (PostgreSQL)
+- Window Functions (ROW_NUMBER, LAG)
 - Common Table Expressions (CTEs)
 - Data Cleaning and Transformation
 
