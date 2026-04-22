@@ -1,13 +1,13 @@
 # Formula 1 2025 Abu Dhabi Grand Prix analysis using SQL
 
 ## Project Overview
-This project analyses the F1 2025 Abu Dhabi GP using SQL.
+This project analyzes the F1 2025 Abu Dhabi GP using SQL.
 It focuses on driver performance, qualifying sessions and race results through data analysis. 
 
 
 
 ## Data Description
-The dataset consists of three CSV files from Kaggle, with minor modifications in Excel (column removal or renaming):  
+The dataset consists of three CSV files from Kaggle, with minor modifications (column removal or renaming):  
 - **lap_times.csv** - lap-by-lap performance data  
 - **qualifying_results.csv** - qualifying session results (Q1, Q2, Q3)  
 - **race_results.csv** - final race standings with detailed race information 
@@ -24,6 +24,13 @@ Transformations included:
 - Handling missing values with NULLIF  
 - Cleaning inconsistent data formats  
 - Casting numeric values to correct data types  
+
+
+## Key Insights
+- The fastest lap does not always reflect overall race performance, while average pace is a better indicator of consistency.
+- Ideal lap calculations, which combine the best sector times, reveal an untapped potential of each driver.
+- Lap-by-lap performance shows fluctuations that may arise from tire degradation, energy deployment or race strategy.
+
 
 
 ## Tech Stack
