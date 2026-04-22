@@ -1,7 +1,7 @@
 --Queries for F1 2025 Abu Dhabi SQL analysis project
 --Divided into categories:
 -- -lap analysis
--- -qualifying results
+-- -qualifying session analysis
 -- -race results
 
 -- 1) Lap analysis
@@ -60,3 +60,57 @@ UNION ALL
 SELECT 'Sector 3', driver, sector3
 FROM S3
 WHERE rnk = 1;
+
+
+
+-- 2) Qualifying session analysis
+
+--Fastest laps by each session
+WITH Q1 AS(
+SELECT full_name, q1_time,
+ROW_NUMBER() OVER(ORDER BY q1_time) AS rnk
+FROM f1_q_results),
+Q2 AS(
+SELECT full_name, q2_time,
+ROW_NUMBER() OVER(ORDER BY q2_time) AS rnk
+FROM f1_q_results),
+Q3 AS(
+SELECT full_name, q3_time,
+ROW_NUMBER() OVER(ORDER BY q3_time) AS rnk
+FROM f1_q_results)
+SELECT 'Q1' AS qualifying_session, full_name, q1_time 
+FROM Q1
+WHERE rnk = 1
+UNION ALL
+SELECT 'Q2', full_name, q2_time 
+FROM Q2
+WHERE rnk = 1
+UNION ALL
+SELECT 'Q3', full_name, q3_time 
+FROM Q3
+WHERE rnk = 1;
+
+
+--Average lap time by each qualifying session
+SELECT AVG(q1_time) AS Q1_avg_lap_time, 
+AVG(q2_time) AS Q2_avg_lap_time,
+AVG(q3_time) AS Q3_avg_lap_time
+FROM f1_q_results;
+
+
+--Average Q1 lap time by each team
+SELECT team, AVG(q1_time) AS average_time FROM f1_q_results
+GROUP BY team
+ORDER BY average_time;
+
+
+--Worst driver in qualifying session by team
+WITH Q_results AS(
+SELECT full_name, team,
+ROW_NUMBER() OVER(PARTITION BY team ORDER BY pos) AS rnk
+FROM f1_q_results
+)
+SELECT full_name, team
+FROM Q_results 
+WHERE rnk = 2
+ORDER BY team;
